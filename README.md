@@ -1,4 +1,5 @@
 🛒 ShopSmart – AI Discount Finder
+
 ShopSmart is an AI-powered web application that helps users find the **best time to buy products** by analyzing pricing trends, discounts, and historical data.
 
 🚀 Features
@@ -38,5 +39,6 @@ ShopSmart-AI-Discount-Finder/
 ├── ml-service/
 ├── data/
 └── README.md
+
 
 
