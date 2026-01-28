@@ -3,12 +3,14 @@
 ShopSmart is an AI-powered web application that helps users find the **best time to buy products** by analyzing pricing trends, discounts, and historical data.
 
 🚀 Features
+
 - 🔍 Search products (e.g., iPhone, Laptop, Headphones)
 - 🤖 AI-based discount & price trend prediction
 - 📉 Suggests **best time to buy**
 - 🎨 Modern, clean, responsive UI
 - ⚡ Fast React frontend
 - 🔐 Scalable backend-ready architecture
+
 
 🖥️ Tech Stack
 
@@ -26,19 +28,8 @@ ShopSmart is an AI-powered web application that helps users find the **best time
 - Pandas, NumPy
 - Price trend analysis models
 
-## 📂 Project Structure
-ShopSmart-AI-Discount-Finder/
-│
-├── frontend/
-│ └── shopsmart-frontend/
-│ ├── src/
-│ ├── public/
-│ └── package.json
-│
-├── backend/
-├── ml-service/
-├── data/
-└── README.md
+
+
 
 
 
