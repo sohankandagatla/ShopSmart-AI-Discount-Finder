@@ -70,7 +70,7 @@ python app.py
 ```
 ---
 
-# 🌱 Future Enhancements
+## 🌱 Future Enhancements
 
 Real-time product price scraping
 
@@ -80,6 +80,6 @@ User accounts & alerts
 
 E-commerce integrations
 
-# 👨‍💻 Author
+## 👨‍💻 Author
 
 Sohan Aspiring Software Engineer | Full Stack & AI Enthusiast
