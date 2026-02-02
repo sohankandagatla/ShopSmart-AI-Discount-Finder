@@ -38,8 +38,6 @@ It intelligently handles valid and invalid inputs, provides smooth UI animations
 
 ## 📂 Project Structure
 
-## 📂 Project Structure
-
 ShopSmart-AI-Discount-Finder/
 ├── frontend/
 │   └── shopsmart-frontend/
