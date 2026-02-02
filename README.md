@@ -1,6 +1,8 @@
-# 🛒 ShopSmart – AI Discount Finder
+# 🛍️ ShopSmart – AI Discount Finder
 
-ShopSmart is an AI-powered web application that helps users find the **best time to buy products** by analyzing pricing trends, discounts, and historical data.
+ShopSmart is a **full-stack AI-powered product price comparison app** that helps users find the **best available deals** across multiple platforms like Amazon and Flipkart.
+
+It intelligently handles valid and invalid inputs, provides smooth UI animations, and presents results in a clean, modern layout.
 
 ---
 
@@ -22,13 +24,14 @@ ShopSmart is an AI-powered web application that helps users find the **best time
 - CSS3 (custom styling)
 - JavaScript (ES6+)
 
-### Backend (Planned / In Progress)
+### Backend
+- Python Flask OR FastAPI
 - Node.js / Express OR Django
 - REST APIs
 
-### ML / AI (Planned)
-- Python
-- Pandas, NumPy
+### ML / Logic
+- Input validation & classification
+- Rule-based + ML hybrid logic
 - Price trend analysis models
 
 ---
@@ -38,16 +41,16 @@ ShopSmart is an AI-powered web application that helps users find the **best time
 ShopSmart-AI-Discount-Finder/
 │
 ├── frontend/
-│ └── shopsmart-frontend/
-│ ├── src/
-│ ├── public/
-│ └── package.json
+│   └── shopsmart-frontend/
 │
 ├── backend/
-├── ml-service/
-├── data/
+│   ├── app.py
+│   └── requirements.txt
+│
+├── ml_service/
+│   └── model.py
+│
 └── README.md
-
 
 ---
 
@@ -57,11 +60,17 @@ ShopSmart-AI-Discount-Finder/
 cd frontend/shopsmart-frontend
 npm install
 npm start
-
-App will run on: http://localhost:3000
 ```
+## ▶️ How to Run the Backend Locally
 
-🌱 Future Enhancements
+```bash
+cd backend
+pip install -r requirements.txt
+python app.py
+```
+---
+
+# 🌱 Future Enhancements
 
 Real-time product price scraping
 
@@ -71,9 +80,6 @@ User accounts & alerts
 
 E-commerce integrations
 
-👨‍💻 Author
+# 👨‍💻 Author
 
-Sohan
-Aspiring Software Engineer | Full Stack & AI Enthusiast
-
-![ShopSmart UI](C:\Users\Sohan0730\ShopSmart-Ai-Discount-Finder\image.png)
+Sohan Aspiring Software Engineer | Full Stack & AI Enthusiast
