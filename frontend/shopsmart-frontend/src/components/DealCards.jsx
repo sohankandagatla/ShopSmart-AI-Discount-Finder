@@ -1,14 +1,22 @@
-function DealCards() {
+/**
+ * DealCards Component
+ *
+ * This component displays available deals from different platforms (Amazon and Flipkart) 
+ * along with their prices and delivery options. It takes in the prices as props and formats 
+ * them for display.
+ * @returns {JSX.Element} The rendered DealCards component.
+ */
+function DealCards({ amazonPrice, flipkartPrice }) {
   const deals = [
     {
       platform: "Amazon",
-      price: "₹56,999",
+      price: `₹${amazonPrice?.toLocaleString()}`,
       delivery: "Free Delivery",
       emoji: "🟠"
     },
     {
       platform: "Flipkart",
-      price: "₹55,499",
+      price: `₹${flipkartPrice?.toLocaleString()}`,
       delivery: "2-Day Delivery",
       emoji: "🔵"
     }
@@ -31,5 +39,5 @@ function DealCards() {
     </div>
   );
 }
-
 export default DealCards;
+

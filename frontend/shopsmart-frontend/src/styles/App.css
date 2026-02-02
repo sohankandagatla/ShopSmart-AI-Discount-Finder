@@ -25,6 +25,7 @@ body {
     0 0 40px rgba(99, 102, 241, 0.35),
     inset 0 0 20px rgba(255,255,255,0.05);
   animation: float 6s ease-in-out infinite;
+  transition: all 0.5s ease;
 }
 
 /* FLOATING ANIMATION */
@@ -43,7 +44,6 @@ body {
   margin-bottom: 6px;
 }
 
-/* SUBTITLE */
 .subtitle {
   font-size: 0.95rem;
   color: #94a3b8;
@@ -64,15 +64,8 @@ body {
   border: 1px solid #334155;
   color: #e5e7eb;
   outline: none;
-  transition: 0.3s;
 }
 
-.search-bar input:focus {
-  border-color: #38bdf8;
-  box-shadow: 0 0 10px rgba(56,189,248,0.4);
-}
-
-/* 🚀 BUTTON */
 .search-bar button {
   padding: 14px 18px;
   border-radius: 10px;
@@ -81,22 +74,16 @@ body {
   color: #020617;
   font-weight: bold;
   cursor: pointer;
-  transition: 0.3s;
 }
 
-.search-bar button:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 18px rgba(99,102,241,0.7);
-}
+/* ================= RESULT CARD ================= */
 
-/* 📊 RESULT CARD */
 .result-card {
   margin-top: 26px;
-  padding: 18px;
-  background: linear-gradient(135deg, #020617, #020617);
+  background: #020617;
   border: 1px solid #334155;
-  border-radius: 14px;
-  text-align: left;
+  border-radius: 20px;
+  padding: 32px;
   animation: fadeIn 0.6s ease-in;
 }
 
@@ -105,30 +92,97 @@ body {
   to { opacity: 1; transform: translateY(0); }
 }
 
-.result-card h3 {
-  margin-bottom: 12px;
+/* ================= LANDSCAPE LAYOUT ================= */
+
+.result-card.landscape {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 40px;
+  align-items: start;
+}
+
+/* 🖼 IMAGE BOX */
+.image-wrapper {
+  width: 100%;
+  height: 260px;
+  background: #020617;
+  border-radius: 20px;
+  border: 1px solid #334155;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.image-warning {
+  margin-top: 12px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #f87171;
+  text-align: center;
+}
+
+/* ✅ IMAGE FIT FIX (CRITICAL) */
+.image-wrapper img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* 🧾 INFO COLUMN */
+.product-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* PRODUCT INFO TEXT */
+.product-info h3 {
+  font-size: 1.8rem;
+  margin-top: -6px;
+  margin-bottom: 22px;
   color: #38bdf8;
 }
 
-/* ⏳ LOADER */
-.loader {
-  margin-top: 20px;
-  font-weight: bold;
-  color: #22d3ee;
-  animation: blink 1.4s infinite;
+/* LABEL + VALUE STRUCTURE */
+.info-row {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 14px;
+  font-size: 1.1rem;
 }
 
-@keyframes blink {
-  0% { opacity: 1 }
-  50% { opacity: 0.4 }
-  100% { opacity: 1 }
+.info-label {
+  color: #94a3b8;
+  font-weight: 600;
+  min-width: 130px;
 }
 
-/* ❌ ERROR */
-.error {
-  color: #f87171;
-  margin-top: 12px;
-  font-weight: bold;
+.info-value {
+  color: #e5e7eb;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+/* CONFIDENCE BADGE – slightly bigger */
+.badge {
+  padding: 7px 14px;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.result-card h3 {
+  color: #38bdf8;
+}
+
+/* 📉 CHART */
+.chart-title {
+  margin-top: 26px;
+  margin-bottom: 14px;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #38bdf8;
 }
 
 /* 🧠 CONFIDENCE BADGE */
@@ -142,42 +196,16 @@ body {
   font-weight: bold;
 }
 
-/* 📊 CONFIDENCE BAR */
-.confidence-bar {
-  margin-top: 12px;
-  height: 10px;
-  width: 100%;
-  background: #020617;
-  border-radius: 999px;
-  overflow: hidden;
-  border: 1px solid #334155;
-}
-
-.confidence-fill {
-  height: 100%;
-  width: 85%;
-  background: linear-gradient(90deg, #22d3ee, #6366f1);
-  animation: loadBar 1.2s ease-out;
-}
-
-@keyframes loadBar {
-  from { width: 0; }
-  to { width: 85%; }
-}
-.chart-title {
-  margin-top: 20px;
-  margin-bottom: 10px;
-  font-size: 0.9rem;
-  color: #38bdf8;
-}
 /* 🛒 DEAL SECTION */
 .deal-section {
-  margin-top: 22px;
+  margin-top: 20px;
 }
 
 .deal-title {
-  margin-bottom: 10px;
-  font-size: 0.9rem;
+  margin-top: 24px;
+  margin-bottom: 14px;
+  font-size: 1.15rem;
+  font-weight: 600;
   color: #38bdf8;
 }
 
@@ -200,28 +228,42 @@ body {
   transform: translateY(-5px);
   box-shadow: 0 0 18px rgba(56,189,248,0.4);
 }
-
-.deal-card h5 {
-  margin-bottom: 6px;
-}
-
-.price {
-  font-weight: bold;
-  color: #22d3ee;
-}
-
-.delivery {
-  font-size: 0.75rem;
-  color: #94a3b8;
-}
-
 .deal-card button {
-  margin-top: 8px;
-  padding: 6px 10px;
-  border-radius: 6px;
+  margin-top: 12px;
+  padding: 10px 16px;
+  border-radius: 10px;
   border: none;
+
   background: linear-gradient(135deg, #6366f1, #22d3ee);
+  color: #020617;
+  font-weight: bold;
+  font-size: 0.85rem;
+
   cursor: pointer;
-  font-size: 0.75rem;
+  transition: all 0.3s ease;
+}
+
+.deal-card button:hover {
+  transform: scale(1.06);
+  box-shadow: 0 0 18px rgba(99, 102, 241, 0.7);
+}
+
+
+/* ================= LANDSCAPE APP WIDTH ================= */
+.landscape-view .card {
+  width: 100%;
+  max-width: 1300px;
+  animation: none;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 900px) {
+  .result-card.landscape {
+    grid-template-columns: 1fr;
+  }
+
+  .image-wrapper {
+    height: 220px;
+  }
 }
 
